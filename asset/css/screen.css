@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+/** 
+ * Assumes default font size 14 px
+ * 
+ * Assigns classes for layout style
+ * common style
+ * .container
+ *    .header
+ *    .section--photo
+ *    .section--article
+ *    .section(--1st|--2nd|--3rd|--4th|...)
+ *    .footer
+ */
+
+/**
+ *
+ * common style
+ *
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #333;
+	font-family: "Lucida Grande", "ヒラギノ角ゴ ProN W3", "HiraKakuPro-W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+	font-size: .875em; /* 14px / 16px */
+	line-height: 1.8;
+	min-width: 960px;
+}
+
+div, a {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, dl {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #333;
+	transition: all .4s ease;
+}
+
+a:hover, a:focus {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+/**
+ *
+ * .container
+ *
+ */
+
+.container {
+	width: 920px;
+	margin: 60px auto;
+}
+
+/**
+ *
+ * .header
+ *
+ */
+
+.header {
+	width: 100%;
+	background-color: #e1e1e1;
+	padding: 35px 42px;
+}
+
+.header:after,
+.header:before {
+	content: '';
+	display: table;
+}
+
+.header:after {
+	clear: both;
+}
+
+
+.header__heading {
+	float: left;
+}
+
+.header__logo {
+	float: right;
+	margin-top: 0;
+}
+
+/**
+ *
+ * .section
+ *
+ */
+
+.section {
+	width: 100%;
+	position: relative;
+}
+
+.section:after,
+.section:before {
+	content: '';
+	display: table;
+}
+
+.section:after {
+	clear: both;
+}
+
+.section--half {
+	width: 50%;
+/*	padding-right: 1px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;*/
+	float: left;
+	position: relative;
+}
+
+.section--article {
+	margin-top: -1px;
+	background-color: #e1e1e1;
+}
+
+.section--photo {
+	height: 520px;
+	margin-bottom: 1px;
+	background: transparent none no-repeat scroll center center;
+}
+
+
+.section--1st {
+	background-image: url("../../image/section-photo01.jpg");
+}
+
+.section--3rd {
+	background-image: url("../../image/section-photo02.jpg");
+}
+
+.section--4th {
+	background-image: url("../../image/section-photo03.jpg");
+}
+
+.section--5th .section--left {
+	background-image: url("../../image/section-photo04-left.jpg");
+}
+
+.section--5th .section--right {
+	background-image: url("../../image/section-photo04-right.jpg");
+}
+
+.section--6th {
+	background-image: url("../../image/section-photo05.jpg");
+}
+
+.section--7th .section--left {
+	background-image: url("../../image/section-photo06-left.jpg");
+}
+
+.section--7th .section--right {
+	background-image: url("../../image/section-photo06-right.jpg");
+}
+
+.section--8th {
+	background-image: url("../../image/section-photo07.jpg");
+}
+
+/**
+ *
+ * .section--photo
+ *
+ */
+
+.section--photo__caption {
+	position: absolute;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, .9);
+	padding: 30px;
+	font-size: .857142857em; /* 12px / 14px */
+	line-height: 1.9;
+	transition: all .4s ease-in-out;
+}
+
+.section--photo__text {
+	transition: all .4s ease-in-out;
+}
+
+.caption--fade-out {
+	background-color: transparent;
+}
+
+.caption--fade-out .section--photo__text {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.section--photo__caption:before {
+	display: block;
+	content: '';
+	background: transparent url("../image/marker.png") no-repeat scroll left 0;
+	width: 100%;
+	height: 22px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.caption__btn--right:before {
+	background-position: right 0;
+}
+
+.section--photo__text {
+	margin-top: .5em;
+}
+
+.section--1st .section--photo__caption {
+	width: 31.3em;
+	top: 90px;
+	left: 166px;
+}
+
+.section--3rd .section--photo__caption {
+	width: 31em;
+	top: 21px;
+	left: 174px;
+}
+
+.section--5th .section--left .section--photo__caption {
+	width: 30em;
+	top: 219px;
+	left: 60px;
+}
+
+.section--5th .section--right .section--photo__caption {
+	width: 21em;
+	top: 245px;
+	left: 87px;
+}
+
+.section--6th .section--photo__caption {
+	width: 29em;
+	top: 150px;
+	left: 250px;
+}
+
+.section--7th .section--photo__caption {
+	width: 20em;
+	top: 55px;
+	left: 180px;
+}
+
+
+.section--8th .section--photo__caption {
+	width: 18em;
+	top: 10px;
+	left: 437px;
+}
+
+/**
+ *
+ * .section--article
+ *
+ */
+
+.section--article__heading {
+	text-align: center;
+	margin: 0;
+	padding: 50px 0;
+}
+
+.section--article__text {
+	width: 43em;
+	margin: 0 auto;
+	line-height: 2.1;
+	padding-bottom: 55px;
+}
+
+.section--9th {
+	padding: 64px 64px 47px;
+}
+
+.block-label {
+	display: inline-block;
+	font-size: .928571429em; /* 13px / 14px */
+	font-weight: normal;
+	padding: .4em 1.2em;
+	border: 1px solid #333;
+	margin: 0 0 38px;
+}
+
+.plan:after,
+.plan:before {
+	content: '';
+	display: table;
+}
+.plan:after {
+	clear: both;
+}
+
+.plan-info {
+	display: block;
+	width: 50%;
+	float: left;
+	font-size: .928571429em; /* 13px / 14px */
+	line-height: 2.3;
+}
+
+.plan-info__heading {
+	display: inline-block;
+	float: left;
+	clear: both;
+	min-width: 5em;
+}
+
+.plan-info__description {
+	display: inline-block;
+	float: left;
+}
+
+.plan__image {
+	width: 50%;
+	float: right;
+}
+
+.link-list__item {
+	display: inline-block;
+}
+
+.link-list__item a {
+	font-size: .928571429em; /* 13px / 14px */
+	margin-right: 3em;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #333;
+}
+
+/**
+ *
+ * .footer
+ *
+ */
+
+.footer {
+	width: 100%;
+	padding: 3em;
+	background-color: #ededed;
+	text-align: center;
+}
+
+.btn--rewind {
+	padding-bottom: 6px;
+	border-bottom: 1px solid #333;
+}
