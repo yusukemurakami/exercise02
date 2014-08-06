@@ -131,10 +131,6 @@ a:hover, a:focus {
 
 .section--half {
 	width: 50%;
-/*	padding-right: 1px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;*/
 	float: left;
 	position: relative;
 }
