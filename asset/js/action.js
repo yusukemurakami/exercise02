@@ -5,7 +5,7 @@
  */
 
 jQuery(function($) {
-	hoverCaption($);
+	setHoverCaption($);
 });
 
 /**
@@ -15,7 +15,7 @@ jQuery(function($) {
  * @require jQuery v1.7.2
  */
 
-function hoverCaption($) {
+function setHoverCaption($) {
 	var $photo = $('.section--photo');
 
 	// 読み込み時にキャプションをフェードアウト
