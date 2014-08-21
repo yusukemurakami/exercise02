@@ -24,7 +24,6 @@ function hoverCaption($) {
 	}
 	init();
 
-
 	if (Modernizr.touch) {
 		// スマホでのタップ対応。スクロール、ピンチ時には反応させない。
 		var isMoved = false;
